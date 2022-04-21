@@ -1,0 +1,9 @@
+
+
+db container:
+docker run -d --name postgres-db \
+-e POSTGRES_PASSWORD=mysecretpassword \
+-e POSTGRES_DB=testzip_users \
+-v /e/codebase/docker_persist/postgres:/var/lib/postgresql/data \
+--net testzip \
+-p 5431:5432 postgres
