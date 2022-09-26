@@ -9,5 +9,5 @@ class Helper:
         return cls.pwd_context.hash(password)
 
     @classmethod
-    def verify_password(cls,password, enc_password):
-        return cls.pwd_context.verify(password,enc_password)
+    def verify_password(cls, password, enc_password):
+        return cls.pwd_context.verify(password, enc_password)

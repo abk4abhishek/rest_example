@@ -5,13 +5,14 @@ from sqlalchemy.orm import sessionmaker
 from .apis import models
 from .config import settings
 
-# SQLALCHEMY_DATABASE_URL = "sqlite:///./sql_app.db"
-SQLALCHEMY_DATABASE_URL = f"postgresql://{settings.APP_DATABASE_USERNAME}:{settings.APP_DATABASE_PASSWORD}@{settings.APP_DATABASE_HOST}:{settings.APP_DATABASE_PORT}/{settings.APP_DATABASE_NAME}"
+SQLALCHEMY_DATABASE_URL = "sqlite:///./sql_app.db"
+# SQLALCHEMY_DATABASE_URL = f"postgresql://{settings.APP_DATABASE_USERNAME}:{settings.APP_DATABASE_PASSWORD}@{settings.APP_DATABASE_HOST}:{settings.APP_DATABASE_PORT}/{settings.APP_DATABASE_NAME}"
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 Base = declarative_base()
+
 
 # Dependency
 def get_db():

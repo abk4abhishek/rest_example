@@ -4,15 +4,15 @@ from .apis.users import userAPI
 
 app = FastAPI()
 
-#API End points
+# API End points
 app.include_router(userAPI)
+
 
 # def getting_requests(request: Request):
 #     my_headers = {"access_token": request.headers.get("Authorization")}
 #     return my_headers
 
 # Home page
-@app.get("/home")
+@app.get("/")
 def home_api():
-    
-    return {"message": "Welcome to TestZip - Users"}
+    return {"message": "Welcome - Users"}
