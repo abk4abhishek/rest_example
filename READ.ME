@@ -1,5 +1,19 @@
+- create virtualenv
+- install following
+-- pip install fastapi
+-- pip install "uvicorn[standard]"
+-- pip install sqlalchemy
+-- pip install pydantic[email]
+-- pip install "python-jose[cryptography]"
+-- pip install "passlib[bcrypt]"
+-- pip install python-multipart
 
-command to run Postgres-db using docker:
+run service using following command:
+uvicorn app.main:app --reload
+
+
+
+command to run Postgres-db using docker(Update database.py also):
 
 db container:
 docker run -d --name postgres-db \
